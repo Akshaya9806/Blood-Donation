@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digital Blood Donation Management System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container">
+    <a class="navbar-brand" href="#">Blood Donation</a>
+  </div>
+</nav>
+
+<header class="text-center bg-light py-5">
+  <h1>Digital Blood Donation Management System</h1>
+  <p class="lead">Connecting donors and recipients efficiently</p>
+</header>
+
+<div class="container my-5">
+  <div class="row">
+    <div class="text-center my-4">
+        <a href="register.html" class="btn btn-danger">Register as Donor / Recipient</a>
+    </div>
+    
+    <!-- Urgent Request -->
+    <div class="col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-header bg-warning text-dark">Urgent Blood Request Posting</div>
+        <div class="card-body">
+          <form id="requestForm">
+            <input type="text" class="form-control mb-2" placeholder="Hospital/Recipient Name" required>
+            <select class="form-control mb-3" required>
+                <option value="">Required Blood Group</option>
+                <option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+                <option>AB+</option><option>AB-</option><option>O+</option><option>O-</option>
+            </select>
+            <textarea class="form-control mb-2" placeholder="Details & Contact Info" required></textarea>
+            <button type="submit" class="btn btn-warning w-100">Post Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Directory -->
+    <div class="col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-header bg-success text-white">Nearby Blood Banks</div>
+        <div class="card-body">
+          <ul class="list-group" id="bankList">
+            <li class="list-group-item">Red Cross, Hyderabad</li>
+            <li class="list-group-item">Apollo Blood Bank, Gachibowli</li>
+            <li class="list-group-item">Lions Blood Bank, Secunderabad</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Eligibility Check -->
+    <div class="col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-header bg-info text-white">Donor Eligibility Check</div>
+        <div class="card-body">
+          <p>Answer the following to check eligibility:</p>
+          <form id="eligibilityForm">
+            <label>Have you donated in the last 3 months?</label>
+            <select class="form-control mb-2" id="lastDonation">
+              <option value="no">No</option>
+              <option value="yes">Yes</option>
+            </select>
+            <button class="btn btn-info w-100" type="submit">Check Eligibility</button>
+            <p id="eligibilityResult" class="mt-2 fw-bold"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-white text-center py-3">
+  &copy; 2025 Blood Donation Management System
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

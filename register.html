@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - Blood Donation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"> <!-- if you use external CSS -->
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+  <h2 class="text-center text-danger">Donor / Recipient Registration</h2>
+  <form class="mt-4" id="registrationForm">
+    <input type="text" class="form-control mb-2" placeholder="Full Name" required>
+    <input type="email" class="form-control mb-2" placeholder="Email" required>
+    <input type="text" class="form-control mb-2" placeholder="Location" required>
+    <select class="form-control mb-3" required>
+      <option value="">Select Blood Group</option>
+      <option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+      <option>AB+</option><option>AB-</option><option>O+</option><option>O-</option>
+    </select>
+    <button type="submit" class="btn btn-danger w-100">Register</button>
+    <p class="text-center mt-3">Already have an account? <a href="index.html">Go to Home</a></p>
+  </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
